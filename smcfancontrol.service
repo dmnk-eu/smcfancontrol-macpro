@@ -1,0 +1,12 @@
+[Unit]
+Description=smcfancontrol
+
+[Service]
+Type=forking
+ExecStart=/opt/smcfancontrol/smcfancontrol
+PIDFile=/var/run/smcfancontrol.pid
+WatchdogSec=2
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
